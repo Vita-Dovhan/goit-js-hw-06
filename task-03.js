@@ -15,13 +15,13 @@ const images = [
 ];
 
 const itemOfImages = images.map(option => {
-  const itemEl = document.createElement('li')
-  const imgEl = document.createElement('img')
+  const itemEl = document.createElement('li');
+  const imgEl = document.createElement('img');
   imgEl.src = option.url;
   imgEl.alt = option.alt;
   imgEl.width = 400;
-  itemEl.appendChild(imgEl)
-  const newArr = document.querySelector("ul")
-  newArr.insertAdjacentElement("beforebegin", itemEl)
+  itemEl.appendChild(imgEl);
+  const newArr = document.querySelector("ul");
+  newArr.insertAdjacentElement("beforebegin", itemEl);
 })
 

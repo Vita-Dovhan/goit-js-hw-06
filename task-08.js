@@ -17,7 +17,8 @@ function onSubmit(event) {
   formEl.reset();
 }
 
-formEl.addEventListener('submit', onSubmit)
+formEl.addEventListener('submit', onSubmit);
+
 function uid() {
   return Math.random().toString(36).substr(2, 9)
 }
