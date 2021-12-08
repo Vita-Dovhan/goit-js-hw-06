@@ -14,14 +14,11 @@ const images = [
   },
 ];
 
-const itemOfImages = images.map(option => {
-  const itemEl = document.createElement('li');
-  const imgEl = document.createElement('img');
-  imgEl.src = option.url;
-  imgEl.alt = option.alt;
-  imgEl.width = 400;
-  itemEl.appendChild(imgEl);
-  const newArr = document.querySelector("ul");
-  newArr.insertAdjacentElement("beforebegin", itemEl);
-})
+const itemOfImages = document.querySelector('.gallery');
 
+const markup = images
+  .map(element => {
+    return `<li><img alt="${element.alt}"src="${element.url}"></li>`;
+  })
+  .join('');
+itemOfImages.insertAdjacentHTML('afterbegin', markup);

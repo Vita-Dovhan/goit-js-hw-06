@@ -1,5 +1,6 @@
+
+
 const formEl = document.querySelector(".login-form")
-const userdata = [];
 
 function onSubmit(event) {
   event.preventDefault();
@@ -7,7 +8,7 @@ function onSubmit(event) {
   const userPassword = event.currentTarget.elements.password.value.trim()
 
 
-  if (!userEmail || !userPassword) alert('Усі поля обов`язкові для заповнення')
+  if (!userEmail || !userPassword) return alert('Усі поля обов`язкові для заповнення')
   const newUser = {
     id: uid(),
     email: userEmail,
